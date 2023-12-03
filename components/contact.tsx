@@ -14,7 +14,7 @@ export default function Contact() {
     <motion.section
       id="contact"
       ref={ref}
-      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center flex flex-col mx-auto items-center"
+      className="mb-20 sm:mb-40 max-w-3xl sm:px-10 md:px-28 text-center flex flex-col mx-auto items-center px-5"
       initial={{
         opacity: 0,
       }}
@@ -30,16 +30,16 @@ export default function Contact() {
     >
       <h1 className="font-bold text-3xl mb-5">Contact me</h1>
 
-      <p className="text-gray-700 -mt-6 dark:text-white/80">
+      <p className="text-gray-700 dark:text-white/80">
         Please contact me directly at{" "}
-        <a className="underline" href="mailto:example@gmail.com">
-          example@gmail.com
+        <a className="underline" href="mailto:akilajay514@gmail.com">
+          akilajay514@gmail.com
         </a>{" "}
         or through this form.
       </p>
 
       <form
-        className="mt-10 flex flex-col dark:text-black"
+        className="mt-10 flex flex-col dark:text-black w-full"
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
 
@@ -52,7 +52,7 @@ export default function Contact() {
         }}
       >
         <input
-          className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="h-14 w-full px-4 rounded-lg focus:out-of-none border border-black/50 dark:border-black/10 dark:bg-gray-800 dark:bg-opacity-80 dark:text-gray-100 dark:focus:bg-opacity-100 transition-all outline-none"
           name="senderEmail"
           type="email"
           required
@@ -60,7 +60,7 @@ export default function Contact() {
           placeholder="Your email"
         />
         <textarea
-          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="h-52 my-3 w-full rounded-lg border focus:out-of-none border-black/50 dark:border-black/10 p-4 dark:bg-gray-800 dark:bg-opacity-80 dark:text-gray-100 dark:focus:bg-opacity-100 transition-all outline-none"
           name="message"
           placeholder="Your message"
           required

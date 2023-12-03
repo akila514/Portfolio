@@ -4,6 +4,7 @@ import React from "react";
 import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
+import { IconBase, IconContext } from "react-icons";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -26,13 +27,13 @@ export default function Skills() {
     <section
       id="skills"
       ref={ref}
-      className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40 flex mx-auto flex-col items-center"
+      className="mb-20 sm:mb-40 px-5 md:px-0 max-w-[53rem] scroll-mt-28 text-center flex mx-auto items-center flex-col"
     >
-      <h1 className="font-bold text-3xl mb-5">My skills</h1>
+      <h1 className="mb-5 font-bold text-3xl">My skills</h1>
       <ul className="flex flex-wrap justify-center gap-2 text-gray-800">
         {skillsData.map((skill, index) => (
           <motion.li
-            className="bg-gray-100 border border-black/10 rounded-3xl px-5 py-3"
+            className="bg-white border flex flex-row space-x-2 border-black/10 rounded-3xl px-5 py-3 dark:bg-white/10 dark:text-white/80 hover:cursor-pointer hover:bg-gray-100 dark:hover:bg-white/20 transition"
             key={index}
             variants={fadeInAnimationVariants}
             initial="initial"
@@ -42,7 +43,10 @@ export default function Skills() {
             }}
             custom={index}
           >
-            {skill}
+            <span>{skill.skill}</span>
+            <div className="opacity-70">
+              {skill.icon && React.createElement(skill.icon, { size: 20 })}
+            </div>
           </motion.li>
         ))}
       </ul>

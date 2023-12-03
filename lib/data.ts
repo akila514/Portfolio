@@ -1,10 +1,12 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import { LuGraduationCap, LuMessageSquare } from "react-icons/lu";
+import redditClone from "@/public/redditclone.png";
+import ecommerce from "@/public/ecommerce.png";
+import lms from "@/public/lms.png";
+import nextShop from "@/public/nextShop.png";
+import chatapp from "@/public/chatapp.jpeg";
 
 export const links = [
   {
@@ -24,84 +26,124 @@ export const links = [
     hash: "#skills",
   },
   {
-    name: "Experience",
-    hash: "#experience",
-  },
-  {
     name: "Contact",
     hash: "#contact",
   },
 ] as const;
 
-export const experiencesData = [
-  {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
-    description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
-  },
-  {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
-  },
-  {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
-    description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
-  },
-] as const;
+// export const experiencesData = [
+//   {
+//     title: "Graduated bootcamp",
+//     location: "Miami, FL",
+//     description:
+//       "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
+//     icon: React.createElement(LuGraduationCap),
+//     date: "2019",
+//   },
+//   {
+//     title: "Front-End Developer",
+//     location: "Orlando, FL",
+//     description:
+//       "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+//     icon: React.createElement(CgWorkAlt),
+//     date: "2019 - 2021",
+//   },
+//   {
+//     title: "Full-Stack Developer",
+//     location: "Houston, TX",
+//     description:
+//       "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
+//     icon: React.createElement(FaReact),
+//     date: "2021 - present",
+//   },
+// ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Social Media Platform",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "Developed a feature-rich Reddit clone using MERN stack, implementing user authentication with JWT with all the main Reddit functionalities.",
+    tags: ["React", "Express.js", "MongoDB", "Tailwind", "Node.js", "Redux"],
+    imageUrl: redditClone,
   },
   {
-    title: "rmtDev",
+    title: "LMS Platform",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "Dynamic online learning platform with secure authentication, course & chapter creation, multimedia support, and Stripe payment integration.",
+    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Prisma", "MySQL"],
+    imageUrl: lms,
   },
   {
-    title: "Word Analytics",
+    title: "E-Commerce Website(MERN Stack)",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "Designed and implemented with user authentication with JWT, and React-Redux for state management.",
+    tags: ["React", "Express.js", "MongoDB", "Tailwind", "Node.js", "Redux"],
+    imageUrl: ecommerce,
+  },
+  {
+    title: "Chat App",
+    description:
+      "Developed a chat application using Flutter and Firebase, with user authentication, real-time messaging.",
+    tags: ["Flutter", "Firebase", "Cloud Firestore", "Dart"],
+    imageUrl: chatapp,
+  },
+  {
+    title: "E-Commerce Website (NEXT JS)",
+    description:
+      "Designed and implemented with user authentication with Next Auth, and Zustand for state management.",
+    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Prisma", "MongoDB"],
+    imageUrl: nextShop,
   },
 ] as const;
 
-export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
-  "Framer Motion",
+import { IconType } from "react-icons";
+import {
+  FaHtml5,
+  FaCss3,
+  FaJs,
+  FaNode,
+  FaGithub,
+  FaDatabase,
+  FaJava,
+  FaFigma,
+} from "react-icons/fa";
+import {
+  SiTypescript,
+  SiPrisma,
+  SiRedux,
+  SiExpress,
+  SiMysql,
+  SiFlutter,
+  SiFirebase,
+  SiTailwindcss,
+  SiPostman,
+} from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
+
+type Skill = {
+  skill: string;
+  icon: IconType | null;
+};
+
+export const skillsData: readonly Skill[] = [
+  { skill: "HTML", icon: FaHtml5 },
+  { skill: "CSS", icon: FaCss3 },
+  { skill: "JavaScript", icon: FaJs },
+  { skill: "TypeScript", icon: SiTypescript },
+  { skill: "React", icon: FaReact },
+  { skill: "Next.js", icon: TbBrandNextjs },
+  { skill: "Node.js", icon: FaNode },
+  { skill: "Github", icon: FaGithub },
+  { skill: "Tailwind", icon: SiTailwindcss },
+  { skill: "Prisma", icon: SiPrisma },
+  { skill: "MongoDB", icon: FaDatabase },
+  { skill: "Redux", icon: SiRedux },
+  { skill: "Express", icon: SiExpress },
+  { skill: "Java", icon: FaJava },
+  { skill: "Figma", icon: FaFigma },
+  { skill: "Firebase", icon: SiFirebase },
+  { skill: "MongoDB", icon: FaDatabase },
+  { skill: "MySQL", icon: SiMysql },
+  { skill: "Flutter", icon: SiFlutter },
+  { skill: "Postman", icon: SiPostman },
 ] as const;

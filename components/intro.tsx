@@ -9,6 +9,7 @@ import Image from "next/image";
 import { HiDownload } from "react-icons/hi";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
+import profileImage from "@/public/image.jpg";
 
 const Intro = () => {
   const { ref } = useSectionInView("Home", 0.5);
@@ -32,10 +33,10 @@ const Intro = () => {
             }}
           >
             <Image
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100"
-              alt="Ricardo portrait"
-              width="192"
-              height="192"
+              src={profileImage}
+              alt="My portrait"
+              width="200"
+              height="200"
               quality="95"
               priority={true}
               className="h-24 w-24 rounded-full object-cover border-[0.35rem] shadow-xl"
@@ -70,7 +71,7 @@ const Intro = () => {
         animate={{ opacity: 1, y: 0 }}
       >
         I'm a <span className="font-bold">full-stack developer</span> looking
-        for a <span className="font-bold">Internship</span>. I enjoy building{" "}
+        for an <span className="font-bold">Internship</span>. I enjoy building{" "}
         <span className="italic">sites & apps</span>. My focus is{" "}
         <span className="underline">React (Next.js)</span>.
       </motion.h1>
@@ -83,7 +84,7 @@ const Intro = () => {
         }}
       >
         <a
-          className="group bg-gray-950 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-x-105 transition cursor-pointer"
+          className="group bg-gray-950 dark:bg-gray-950/80 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-x-105 transition cursor-pointer"
           href="#contact"
           onClick={() => {
             setActiveSection("Contact");
@@ -94,7 +95,7 @@ const Intro = () => {
           <MdOutlineEmail className="opacity-60 group-hover:translate-x-1 transition" />
         </a>
         <a
-          className="group  px-7 py-3  bg-gray-100 flex border border-black/10 items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-x-105 transition cursor-pointer"
+          className="group  px-7 py-3  bg-gray-100 flex border border-black/10 items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-x-105 transition cursor-pointer dark:bg-white/10"
           href="/CV.pdf"
           download
         >
@@ -103,7 +104,7 @@ const Intro = () => {
         </a>
 
         <a
-          href=""
+          href="https://github.com/akila514"
           target="_blank"
           className="flex flex-row group outline-none focus:scale-110 hover:scale-110 active:scale-x-105 transition"
         >
@@ -111,7 +112,7 @@ const Intro = () => {
           <span className="flex my-auto ml-2">Github</span>
         </a>
         <a
-          href=""
+          href="https://www.linkedin.com/in/akila-jayawardana-871b01256/"
           target="_blank"
           className="flex flex-row group outline-none focus:scale-110 hover:scale-110 active:scale-x-105 transition"
         >
