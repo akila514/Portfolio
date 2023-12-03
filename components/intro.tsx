@@ -8,9 +8,12 @@ import { MdOutlineEmail } from "react-icons/md";
 import Image from "next/image";
 import { HiDownload } from "react-icons/hi";
 import { useSectionInView } from "@/lib/hooks";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 const Intro = () => {
   const { ref } = useSectionInView("Home", 0.5);
+
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
     <section
@@ -81,7 +84,11 @@ const Intro = () => {
       >
         <a
           className="group bg-gray-950 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-x-105 transition cursor-pointer"
-          href=""
+          href="#contact"
+          onClick={() => {
+            setActiveSection("Contact");
+            setTimeOfLastClick(Date.now());
+          }}
         >
           Contact me
           <MdOutlineEmail className="opacity-60 group-hover:translate-x-1 transition" />
