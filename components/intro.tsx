@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import Image from "next/image";

@@ -4,7 +4,6 @@ import React from "react";
 import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
-import { IconBase, IconContext } from "react-icons";
 
 const fadeInAnimationVariants = {
   initial: {
