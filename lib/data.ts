@@ -55,23 +55,47 @@ export const links = [
 export const projectsData = [
   {
     title: "Social Media Platform",
-    description:
-      "Developed a feature-rich Reddit clone using MERN stack, implementing user authentication with JWT with all the main Reddit functionalities.",
-    tags: ["React", "Express.js", "MongoDB", "Tailwind", "Node.js", "Redux"],
+    description: "Developed a feature-rich Reddit clone using MERN stack",
+    tags: [
+      "React",
+      "Express.js",
+      "MongoDB",
+      "Tailwind",
+      "Node.js",
+      "JWT",
+      "Redux",
+    ],
     imageUrl: redditClone,
   },
   {
     title: "LMS Platform",
-    description:
-      "Dynamic online learning platform with secure authentication, course & chapter creation, multimedia support, and Stripe payment integration.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Prisma", "MySQL"],
+    description: "Dynamic online learning platform with secure authentication",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind",
+      "Prisma",
+      "MySQL",
+      "Stripe",
+      "Clerk",
+      "Mux",
+      "Uploadthing",
+    ],
     imageUrl: lms,
   },
   {
-    title: "E-Commerce Website(MERN Stack)",
+    title: "E-Commerce Website",
     description:
-      "Designed and implemented with user authentication with JWT, and React-Redux for state management.",
-    tags: ["React", "Express.js", "MongoDB", "Tailwind", "Node.js", "Redux"],
+      "Designed and implemented a Ecommerce website using MERN stack",
+    tags: [
+      "React",
+      "Express.js",
+      "MongoDB",
+      "Tailwind",
+      "Node.js",
+      "JWT",
+      "Redux",
+    ],
     imageUrl: ecommerce,
   },
   {
@@ -82,10 +106,17 @@ export const projectsData = [
     imageUrl: chatapp,
   },
   {
-    title: "E-Commerce Website (NEXT JS)",
-    description:
-      "Designed and implemented with user authentication with Next Auth, and Zustand for state management.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Prisma", "MongoDB"],
+    title: "E-Commerce Website",
+    description: "E commerce website, Designed and implemented a using NEXT JS",
+    tags: [
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Tailwind",
+      "Prisma",
+      "MongoDB",
+      "NextAuth",
+    ],
     imageUrl: nextShop,
   },
 ] as const;
