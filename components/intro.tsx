@@ -75,7 +75,7 @@ const Intro = () => {
         <span className="underline">React (Next.js)</span>.
       </motion.h1>
       <motion.div
-        className="flex flex-col sm:flex-row items-center gap-2 px-4 font-medium justify-evenly"
+        className="flex flex-col space-y-6 sm:space-y-0 sm:flex-row items-center gap-2 px-4 font-medium justify-evenly"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
